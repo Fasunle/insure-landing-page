@@ -5,6 +5,8 @@ import bgPatternIntroLeftMobile from './assets/bg-pattern-intro-left-mobile.svg'
 import bgPatternIntroLeftDesktop from './assets/bg-pattern-intro-left-desktop.svg';
 import bgPatternIntroRightMobile from './assets/bg-pattern-intro-right-mobile.svg';
 import bgPatternIntroRightDesktop from './assets/bg-pattern-intro-right-desktop.svg';
+import bgPatternHowWeWorkDesktop from './assets/bg-pattern-how-we-work-desktop.svg';
+import bgPatternHowWeWorkMobile from './assets/bg-pattern-how-we-work-mobile.svg';
 import snappyProcessIcon from './assets/icon-snappy-process.svg';
 import affordableIcon from './assets/icon-affordable-prices.svg';
 import peopleFirstIcon from './assets/icon-people-first.svg';
@@ -103,9 +105,19 @@ function App() {
           </div>
         </div>
       </section>
-      Find out more about how we work How we work Our company How we work Why
-      Insure? View plans Reviews Help me FAQ Terms of use Privacy policy Cookies
-      Contact Sales Support Live chat Others Careers Press Licenses
+      <section className='more-info'>
+        <h1>Find out more about how we work</h1>
+        <button className='btn btn--how-we-work'>How we work</button>
+        <picture className='more-info-bg'>
+          <source
+            media='(min-width: 46.25em)'
+            srcSet={bgPatternHowWeWorkDesktop}
+          />
+          <img src={bgPatternHowWeWorkMobile} alt='' />
+        </picture>
+      </section>
+      Why Insure? View plans Reviews Help me FAQ Terms of use Privacy policy
+      Cookies Contact Sales Support Live chat Others Careers Press Licenses
     </div>
   );
 }
