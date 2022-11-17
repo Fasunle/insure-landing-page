@@ -1,0 +1,135 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero__info {
+  text-align: center;
+  color: $primary-clr;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  padding: 5em 1em;
+
+  .title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: 'DM Serif Display';
+    line-height: 1;
+    max-width: 15ch;
+  }
+
+  .description {
+    max-width: 50ch;
+    font-size: 1.125rem;
+  }
+
+  .bg-pattern {
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+    inset: 0;
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $accent-clr;
+
+    overflow: hidden;
+  }
+
+  .hero__bg--bottom,
+  .hero__bg--top {
+    align-self: start;
+    max-width: 9em;
+    width: 9em;
+    position: relative;
+  }
+
+  .hero__bg--top {
+    top: -2rem;
+    left: -1rem;
+  }
+
+  .hero__bg--bottom {
+    align-self: end;
+    top: 10rem;
+    right: -2.5rem;
+    img {
+      max-height: 400px;
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  .bg-desktop {
+    display: none;
+  }
+
+  @include tablet-up {
+    display: grid;
+    grid-template-columns: 3rem repeat(2, 1fr) 3rem;
+
+    background-color: $accent-clr;
+
+    .bg-pattern {
+      display: none;
+    }
+
+    .hero__info {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+
+      // make readable on large screen
+      text-align: left;
+
+      align-items: flex-start;
+      justify-self: end;
+    }
+
+    .hero__image {
+      grid-column: 3 / 4;
+
+      display: flex;
+      justify-content: center;
+
+      // deck image
+      position: relative;
+      bottom: -5rem;
+
+      img {
+        max-height: 35rem;
+        width: 30rem;
+        margin: 0;
+      }
+    }
+
+    .bg-desktop {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+
+      img:first-child {
+        align-self: end;
+        max-height: 23rem;
+        max-width: min(30vw, 30rem);
+        position: relative;
+        top: -2rem;
+      }
+
+      img:last-child {
+        max-height: 20rem;
+        max-width: 10rem;
+        position: relative;
+        top: 5rem;
+      }
+    }
+  }
+}
