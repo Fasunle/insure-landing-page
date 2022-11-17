@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+  padding: 0.5em 1em;
+  background-color: transparent;
+  border: 1px solid $primary-clr;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $text-clr;
+}
+
+.btn--hero {
+  padding-inline: 2em;
+  font-size: 1.1rem;
+  color: $primary-clr;
+  background-color: $accent-clr;
+}
