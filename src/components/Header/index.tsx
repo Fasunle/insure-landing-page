@@ -2,12 +2,9 @@ import {useState} from 'react';
 import logo from '../../assets/logo.svg';
 import iconClose from '../../assets/icon-close.svg';
 import harmburgerMenu from '../../assets/icon-hamburger.svg';
-import patternRightIntroDesktopIcon from '../../assets/bg-pattern-intro-right-desktop.svg';
-import patternRightIntroMobileIcon from '../../assets/bg-pattern-intro-right-mobile.svg';
 import bgPatternMobileNav from '../../assets/bg-pattern-mobile-nav.svg';
-import patternLeftIntroDesktopIcon from '../../assets/bg-pattern-intro-left-desktop.svg';
 
-export default function () {
+export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
