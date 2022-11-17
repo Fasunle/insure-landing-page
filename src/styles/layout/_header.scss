@@ -1,0 +1,132 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 1em;
+  height: 5rem;
+
+  .menu {
+    position: relative;
+    z-index: 10;
+
+    height: 2.75rem;
+    aspect-ratio: 1;
+
+    border-style: none;
+    cursor: pointer;
+
+    background-color: transparent;
+
+    @include tablet-up {
+      display: none;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    inset: 0;
+    top: 5rem;
+    transition: transform 400ms ease-in-out;
+    transform: translateY(-100vh);
+    background-color: $accent-clr;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet-up {
+      background-color: $primary-clr;
+    }
+
+    &__items {
+      padding: 1em;
+      padding-top: 2em;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 2rem;
+
+      .nav__item--link {
+        text-decoration: none;
+        font-variant-caps: all-small-caps;
+        color: $primary-clr;
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        @include tablet-up {
+          color: $text-clr;
+        }
+      }
+
+      .nav__item-cta {
+        border: $primary-clr 2px solid;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .bg-bottom img {
+      min-width: 100%;
+      height: 21.875em;
+    }
+
+    @include tablet-up {
+      position: unset;
+      transform: translateY(0);
+
+      .bg-bottom {
+        display: none;
+      }
+
+      &__items {
+        color: $accent-clr;
+        flex-direction: row;
+        gap: 2rem;
+        margin: 0;
+        padding: 0.5em;
+
+        .nav__item-cta {
+          width: unset;
+          border: none;
+        }
+
+        @include tablet-up {
+          .nav__item--link {
+            font-variant: normal;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+
+          .nav__item-cta .nav__item--link {
+            border: 2px solid $accent-clr;
+            padding: 0.5em 1em;
+            transition: all 300ms ease;
+
+            &:hover {
+              background-color: $accent-clr;
+              color: $primary-clr;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet-up {
+    padding-inline: 3em;
+  }
+
+  @include desktop {
+    padding-inline: 5em;
+  }
+}
+
+.show-nav {
+  transform: translateY(0) !important;
+}
