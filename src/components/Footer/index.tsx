@@ -10,22 +10,28 @@ export default function Footer() {
   return (
     <footer className='footer'>
       <div className='footer--header'>
-        <div className='imageContainer'>
+        <a href='/' className='imageContainer'>
           <img className='icon' src={logo} alt='insure logo' />
-        </div>
+        </a>
         <div className='socials'>
-          <img src={facebookIcon} alt='' className='icon' />
-          <img src={twitterIcon} alt='' className='icon' />
-          <img src={pinterestIcon} alt='' className='icon' />
-          <img src={instagramIcon} alt='' className='icon' />
+          <a href='#/facebook'>
+            <img src={facebookIcon} alt='' className='icon' />
+          </a>
+          <a href='#/twitter'>
+            <img src={twitterIcon} alt='' className='icon' />
+          </a>
+          <a href='#/pinterest'>
+            <img src={pinterestIcon} alt='' className='icon' />
+          </a>
+          <a href='#/instagram'>
+            <img src={instagramIcon} alt='' className='icon' />
+          </a>
         </div>
       </div>
 
       <div className='information'>
         <div className='our-company'>
-          <a href='#/' className='title'>
-            Our Company
-          </a>
+          <h4>Our Company</h4>
           <a href='#/'>How we work</a>
           <a href='#/'>Why Insure?</a>
           <a href='#/'>View plans</a>
@@ -33,9 +39,7 @@ export default function Footer() {
         </div>
 
         <div className='help-me'>
-          <a href='#/' className='title'>
-            Help me
-          </a>
+          <h4>Help me</h4>
           <a href='#/'>FAQ</a>
           <a href='#/'>Terms of use</a>
           <a href='#/'>Privacy</a>
@@ -44,18 +48,14 @@ export default function Footer() {
         </div>
 
         <div className='contact'>
-          <a href='#/' className='title'>
-            Contact
-          </a>
+          <h4>Contact</h4>
           <a href='#/'>Sales</a>
           <a href='#/'>Support</a>
           <a href='#/'>Live chat</a>
         </div>
 
         <div className='others'>
-          <a href='#/' className='title'>
-            Others
-          </a>
+          <h4>Others</h4>
           <a href='#/'>Careers</a>
           <a href='#/'>Press</a>
           <a href='#/'>Licenses</a>

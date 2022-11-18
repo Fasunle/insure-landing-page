@@ -19,6 +19,7 @@ export default function Hero() {
         />
       </picture>
       <div className='hero__info'>
+        <hr className='divider' />
         <h1 className='title'>
           Humanizing <span className='title--wrap'>your insurance.</span>
         </h1>
