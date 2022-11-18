@@ -12,6 +12,16 @@
   position: relative;
   padding: 5em 1em;
 
+  .divider {
+    height: 2px;
+    width: 10rem;
+    background-color: $secondary-clr;
+    @include tablet-up {
+      margin: 0;
+      margin-bottom: 2em;
+    }
+  }
+
   .title {
     font-size: 3.2rem;
     font-weight: 700;
@@ -240,16 +250,25 @@
   }
 
   @include tablet-up {
-    padding-top: 2em;
+    gap: 1rem;
+    padding: 1em 0;
+
+    h1 {
+      padding: 0;
+      padding-top: 0.5em;
+      font-size: 2.5rem;
+    }
 
     .btn--how-we-work {
-      margin-bottom: 1em;
+      margin-bottom: 0.9em;
+      padding: 0.25em 1em;
     }
   }
 
   @include desktop {
     flex-direction: row;
-    margin: 2em auto;
+    margin-inline: auto;
+    padding: 1em 0;
 
     h1 {
       text-align: left;
