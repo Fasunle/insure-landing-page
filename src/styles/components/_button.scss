@@ -3,10 +3,17 @@
 .btn {
   padding: 0.5em 1em;
   background-color: transparent;
-  border: 1px solid $primary-clr;
   text-transform: uppercase;
   font-weight: 600;
-  color: $text-clr;
+  border: 2px solid $primary-clr;
+
+  padding: 0.5em 1em;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: $primary-clr;
+    color: $accent-clr !important;
+  }
 }
 
 .btn--hero {

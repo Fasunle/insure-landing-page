@@ -68,13 +68,12 @@
   position: relative;
   .bg-desktop {
     display: none;
+    background-color: $accent-clr;
   }
 
   @include tablet-up {
     display: grid;
     grid-template-columns: 3rem repeat(2, 1fr) 3rem;
-
-    background-color: $accent-clr;
 
     .bg-pattern {
       display: none;
@@ -111,6 +110,7 @@
     .bg-desktop {
       position: absolute;
       inset: 0;
+      z-index: -2;
       overflow: hidden;
 
       display: flex;
