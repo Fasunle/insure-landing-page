@@ -89,6 +89,7 @@
     font-weight: 700;
     font-family: 'DM Serif Display';
     font-size: 1.2rem;
+    color: lighten($text-clr, 35%);
   }
 
   @include tablet-up {
