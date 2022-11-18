@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+  padding: 0.5em 1em;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid $primary-clr;
+
+  padding: 0.5em 1em;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: $primary-clr;
+    color: $accent-clr !important;
+  }
+}
+
+.btn--hero {
+  padding-inline: 2em;
+  font-size: 1.1rem;
+  color: $primary-clr;
+  background-color: $accent-clr;
+}
