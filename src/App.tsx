@@ -6,6 +6,8 @@ import bgPatternIntroLeftDesktop from './assets/bg-pattern-intro-left-desktop.sv
 import bgPatternIntroRightMobile from './assets/bg-pattern-intro-right-mobile.svg';
 import bgPatternIntroRightDesktop from './assets/bg-pattern-intro-right-desktop.svg';
 import bgPatternHowWeWorkDesktop from './assets/bg-pattern-how-we-work-desktop.svg';
+import bgPatternFooterDesktop from './assets/bg-pattern-footer-desktop.svg';
+import bgPatternFooterMobile from './assets/bg-pattern-footer-mobile.svg';
 import bgPatternHowWeWorkMobile from './assets/bg-pattern-how-we-work-mobile.svg';
 import snappyProcessIcon from './assets/icon-snappy-process.svg';
 import affordableIcon from './assets/icon-affordable-prices.svg';
@@ -175,6 +177,14 @@ function App() {
             <a href='#/'>Licenses</a>
           </div>
         </div>
+
+        <picture className='bg-pattern'>
+          <source
+            media='(min-width: 46.25em)'
+            srcSet={bgPatternFooterDesktop}
+          />
+          <img src={bgPatternFooterMobile} alt='' />
+        </picture>
       </footer>
     </div>
   );
