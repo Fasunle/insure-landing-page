@@ -251,6 +251,7 @@
 
   @include tablet-up {
     gap: 1rem;
+    padding: 1em 0;
 
     h1 {
       padding: 0;
@@ -266,8 +267,9 @@
 
   @include desktop {
     flex-direction: row;
-    margin: 2em auto;
-    max-height: 8rem;
+    margin-inline: auto;
+    // max-height: 9rem;
+    padding: 1em 0;
 
     h1 {
       text-align: left;
